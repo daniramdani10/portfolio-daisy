@@ -6,7 +6,7 @@ import Proficiency from "./components/Proficiency";
 function App() {
   return (
     <div className="font-poppins">
-      <div className="max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto bg-base-200">
+      <div className="w-full sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto">
         <Profile />
         <About />
         <Proficiency />
