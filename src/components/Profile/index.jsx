@@ -17,7 +17,7 @@ import ListData from "./ListData";
 
 const Profile = () => {
   return (
-    <div className="flex flex-col lg:flex-row gap-2 lg:gap-7 pb-7 px-7 items-center rounded-md h-auto bg-base-200 mt-10">
+    <div className="flex flex-col lg:flex-row gap-2 lg:gap-7 pb-7 px-7 items-center rounded-md h-auto bg-base-200 md:mt-10">
       <div className="flex flex-col items-center gap-2">
         <ProfileImage />
         <ListSocial>Front-end Developer</ListSocial>
