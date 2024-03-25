@@ -8,7 +8,7 @@ const ProfileImage = () => {
         alt="profile"
         className="w-52 h-52 object-cover rounded-lg mt-5"
       />
-      <div className="text-xl font-bold font-RobotoSlab">Dani Ramdani</div>
+      <div className="text-xl font-bold font-poppins">Dani Ramdani</div>
     </>
   );
 };
