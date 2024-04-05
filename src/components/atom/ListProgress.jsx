@@ -5,7 +5,7 @@ const ListProgress = ({ title, progress }) => {
     <div className="flex flex-col gap-1">
       <div>{title}</div>
       <progress
-        className="progress progress-primary w-full"
+        className="progress  w-full"
         value={progress}
         max="100"
       ></progress>

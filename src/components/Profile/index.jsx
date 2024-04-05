@@ -16,6 +16,22 @@ import ProfileImage from "./ProfileImage";
 import ListData from "./ListData";
 
 const Profile = () => {
+  const handleDownloadCV = () => {
+    // Mengganti URL dengan URL tempat CV Anda tersedia
+    const cvUrl = "../../public/cv/dani_ramdani.pdf";
+
+    // Membuat sebuah elemen anchor untuk menginisiasi pengunduhan CV
+    const link = document.createElement("a");
+    link.href = cvUrl;
+    link.download = "dani_ramdani.pdf"; // Nama file CV yang akan diunduh
+    document.body.appendChild(link);
+
+    // Klik link secara otomatis untuk menginisiasi pengunduhan CV
+    link.click();
+
+    // Hapus elemen anchor setelah selesai
+    document.body.removeChild(link);
+  };
   return (
     <div className="flex flex-col lg:flex-row gap-2 lg:gap-7 pb-7 px-7 items-center rounded-md h-auto md:mt-10">
       <div className="flex flex-col items-center gap-2">
@@ -52,7 +68,10 @@ const Profile = () => {
             <Calendar size={20} color="#1773EA" />
           </ListData>
         </div>
-        <button className="flex items-center gap-3 btn btn-primary px-5 py-2 w-max rounded-md mt-2 text-xs ">
+        <button
+          onClick={handleDownloadCV}
+          className="flex items-center gap-3 btn bg-neutral hover:bg-neutral-700 text-white px-5 py-2 w-max rounded-md mt-2 text-xs "
+        >
           <DownloadSimple size={24} />
           Download CV
         </button>
