@@ -2,7 +2,7 @@ import React from "react";
 
 const TagTech = ({ children }) => {
   return (
-    <span className="px-2 py-[1px] rounded-md text-[10px] bg-base-100 shadow-sm font-normal">
+    <span className="px-2 py-[1px] rounded text-[10px] badge-ghost font-normal">
       {children}
     </span>
   );

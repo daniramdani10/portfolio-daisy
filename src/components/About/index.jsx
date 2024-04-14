@@ -1,68 +1,39 @@
-import {
-  Code,
-  Database,
-  Laptop,
-  Student,
-  UserCircle,
-} from "@phosphor-icons/react";
+import { Dot } from "@phosphor-icons/react";
 import React from "react";
+import ListProgress from "../atom/ListProgress";
+import LayoutMain from "../Layout/LayoutMain";
+import SubTitle from "../atom/SubTitle";
 import DetailList from "./DetailList";
-import ListSide from "./ListSide";
-import TagTech from "./TagTech";
-import HeaderContent from "../atom/HeaderContent";
 
 const About = () => {
   return (
-    <div className="flex flex-col px-7 gap-5">
-      <HeaderContent title="About" logo={<UserCircle size={28} />}>
+    <LayoutMain title="About">
+      <div className="text-xs">
         I am a junior fornt-end developer who is attending a full-stack
         developer bootcamp in Harisenin. I turn designs into interactive web
         pages.
-      </HeaderContent>
-      <div className="flex flex-col gap-3">
-        <HeaderContent title="What i do" logo={<Code size={28} />}>
-          <div className="flex justify-between gap-5 flex-wrap">
-            <ListSide logo={<Laptop size={28} />} label="Front-end">
-              <DetailList>
-                Building responsive SPA & PWA in React.js and Vue.js
-              </DetailList>
-              <DetailList>
-                Building Responsive Static Websites Using Next.js
-              </DetailList>
-              <div className="flex gap-3 items-start border-t py-3 border-neutral-content">
-                <div className="text-xs min-w-20">Tech Stack:</div>
-                <div className="flex gap-1 flex-wrap ">
-                  <TagTech>Html</TagTech>
-                  <TagTech>JavaScript</TagTech>
-                  <TagTech>Css</TagTech>
-                  <TagTech>React Js</TagTech>
-                  <TagTech>Vue Js</TagTech>
-                  <TagTech>TypeScript</TagTech>
-                  <TagTech>Next Js</TagTech>
-                  <TagTech>Redux Js</TagTech>
-                </div>
-              </div>
-            </ListSide>
-
-            <ListSide logo={<Database size={28} />} label="Back-end">
-              <DetailList>Manage database system</DetailList>
-              <DetailList>
-                Building Rest API using Express and Prisma
-              </DetailList>
-              <div className="flex gap-3 items-start border-t py-3 border-neutral-content">
-                <div className="text-xs min-w-20">Tech Stack:</div>
-                <div className="flex gap-1 flex-wrap">
-                  <TagTech>Database</TagTech>
-                  <TagTech>Express</TagTech>
-                  <TagTech>Sequelize</TagTech>
-                  <TagTech>Prisma</TagTech>
-                </div>
-              </div>
-            </ListSide>
-          </div>
-        </HeaderContent>
       </div>
-    </div>
+      <div className="flex flex-col gap-1">
+        <SubTitle title="Frontend" />
+        <DetailList>
+          Building responsive SPA & PWA in React.js and Vue.js
+        </DetailList>
+        <DetailList>
+          Building Responsive Static Websites Using Next.js
+        </DetailList>
+      </div>
+      <div className="flex flex-col gap-1">
+        <SubTitle title="Backend" />
+        <DetailList>Manage database system</DetailList>
+        <DetailList>Building Rest API using Express and Prisma</DetailList>
+      </div>
+      <div>
+        <div className="text-base font-semibold">Proficiency</div>
+        <ListProgress title="Front-end" progress={80} />
+        <ListProgress title="Back-end" progress={70} />
+        <ListProgress title="Programming" progress={50} />
+      </div>
+    </LayoutMain>
   );
 };
 

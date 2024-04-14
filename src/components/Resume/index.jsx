@@ -1,133 +1,97 @@
 import React from "react";
 import HeaderContent from "../atom/HeaderContent";
+import ListResume from "./ListResume";
+import LayoutMain from "../Layout/LayoutMain";
+import SubTitle from "../atom/SubTitle";
+import CardResume from "../atom/CardResume";
+import { Dot } from "@phosphor-icons/react";
+import DetailList from "../About/DetailList";
 
-const Resume = () => {
+const index = () => {
   return (
-    <div>
-      <HeaderContent title="Resume"></HeaderContent>
-      <div role="tablist" className="tabs tabs-lifted">
-        <input
-          type="radio"
-          name="my_tabs_2"
-          role="tab"
-          className="tab"
-          aria-label="Education"
-        />
-        <div
-          role="tabpanel"
-          className="tab-content bg-base-100 border-base-300 rounded-box p-6"
-        >
-          <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-            <li>
-              <hr />
-              <div className="timeline-middle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="h-5 w-5"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <div className="timeline-end mb-10">
-                <time className="font-mono italic">2024</time>
-                <div className="text-lg font-black">Harisenin Bootcamp</div>
-                <div className="text-xs">Fullstack-Developer</div>
-                <div className="text-primary">3.47/4.0</div>
-                <div className="text-xs">
-                  Final Project : Design and Develop Sportwear commerce within
-                  three months
-                </div>
-              </div>
-              <hr />
-            </li>
-            <li>
-              <div className="timeline-middle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="h-5 w-5"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <div className="timeline-start md:text-end mb-10">
-                <time className="font-mono italic">2020</time>
-                <div className="text-lg font-black">Kuningan University</div>
-                <div className="text-xs">
-                  Bachelor's Degree in Informatics Engineering
-                </div>
-                <div className="text-primary">3.47/4.00</div>
-                <div className="text-xs">
-                  Thesis : The Virtual Reality-Based Shortest Path Searching
-                  Application For Existing Building Locations In Kuningan
-                  University Using Dijkstra Algorithm
-                </div>
-              </div>
-              <hr />
-            </li>
-          </ul>
+    // <div className="my-3 px-7">
+    //   <HeaderContent title="">
+    //     <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+    //       <div className="flex flex-col gap-7">
+    //         <div className="font-bold text-lg">Education</div>
+    //         <ListResume
+    //           year={2024}
+    //           title="Harisenin Bootcamp"
+    //           position="Fullstack - Developer"
+    //           ipk="3.47 / 4.0"
+    //           title_description="Final Project"
+    //         >
+    //           Design and Develop Sportwear commerce within three months
+    //         </ListResume>
+    //         <ListResume
+    //           year={2020}
+    //           title="Kuningan University"
+    //           position="Bachelor's Degree in Informatics Engineering"
+    //           ipk="3.47 / 4.0"
+    //           title_description="Thesis"
+    //         >
+    //           The Virtual Reality-Based Shortest Path Searching Application For
+    //           Existing Building Locations In Kuningan University Using Dijkstra
+    //           Algorithm
+    //         </ListResume>
+    //       </div>
+    //       <div className="flex flex-col gap-3">
+    //         <div className="font-bold text-lg">Experience</div>
+    //         <ListResume
+    //           year="2018-Present"
+    //           title="Roomfazza"
+    //           position="Social Media Specialist"
+    //           ipk=""
+    //           title_description="Job desk"
+    //         >
+    //           <div>
+    //             <div>Make plans to advertise product sales</div>
+    //             <div>Create content for social media and advertising needs</div>
+    //             <div>Scheduling content uploads to social media</div>
+    //           </div>
+    //         </ListResume>
+    //       </div>
+    //     </div>
+    //   </HeaderContent>
+    // </div>
+    <LayoutMain title="Resume">
+      <SubTitle title="Education" />
+      <CardResume
+        title="Harisenin Bootcamp"
+        tahun="2024"
+        position="Fullstack Developer - 3.4/4"
+      >
+        <div className="text-xs">
+          Final Project : Design and Develop Sportwear commerce within three
+          months
         </div>
-
-        <input
-          type="radio"
-          name="my_tabs_2"
-          role="tab"
-          className="tab"
-          aria-label="Experience"
-        />
-        <div
-          role="tabpanel"
-          className="tab-content bg-base-100 border-base-300 rounded-box p-6"
-        >
-          <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-            <li>
-              <hr />
-              <div className="timeline-middle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="h-5 w-5"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <div className="timeline-end mb-10">
-                <time className="font-mono italic">2018-present</time>
-                <div className="text-lg font-black">Roomfazza</div>
-                <div className="text-xs text-primary">
-                  Social media specialist
-                </div>
-                <div className="text-xs">
-                  <li>● Make plans to advertise product sales</li>
-                  <li>
-                    ● Create content for social media and advertising needs
-                  </li>
-                  <li>● Scheduling content uploads to social media</li>
-                </div>
-              </div>
-              <hr />
-            </li>
-          </ul>
+      </CardResume>
+      <CardResume
+        title="Kuningan University"
+        tahun="2015-2020"
+        position="Bachelor's Degree in Informatics Engineering - 3.47/4.00"
+      >
+        <div className="text-xs">
+          Thesis : The Virtual Reality-Based Shortest Path Searching Application
+          For Existing Building Locations In Kuningan University Using Dijkstra
+          Algorithm.
         </div>
-      </div>
-    </div>
+      </CardResume>
+      <SubTitle title="Experience" />
+      <CardResume
+        title="Roomfazza"
+        tahun="2018-Present"
+        position="Social Media Specialist"
+      >
+        <div className="text-xs">Jobdesk:</div>
+        <DetailList>Make plans to advertise product sales</DetailList>
+        <DetailList>
+          Create content for social media and advertising needs
+        </DetailList>
+        <DetailList>Scheduling content uploads to social media</DetailList>
+      </CardResume>
+    </LayoutMain>
   );
 };
 
-export default Resume;
+export default index;
